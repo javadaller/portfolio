@@ -16,12 +16,16 @@ header {
     }
 }
 
-#os {
-    position: absolute;
-    top:2%;
-    right:2%;
+header {
+    p {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
 }
 
 #osVersion {
-    vertical-align: text-top;
+    position: absolute;
+    top:2%;
+    right:2%;
 }

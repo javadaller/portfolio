@@ -73,22 +73,19 @@ background_lines();
 
 //--- ON / OFF ---//---------------------------------------------------------------------------------
 let isOn=true;
-const onOff=document.querySelector('#button_on');
-onOff.addEventListener("click", function() {
+const button=document.querySelector('#button_on');
+const onOff=document.querySelectorAll('.onOff');
+
+button.addEventListener("click", function() {
     const led=document.querySelector('#led_on');
     if (isOn) {
         isOn=false;
-        //document.querySelector('main').style.display='none';
-        document.querySelector('#fx_snow').style.display='none';
-        document.querySelector('#fx_scanline').style.display='none';
-        document.querySelector('#screen_texture').style.display='block';
+        onOff.forEach((element) => element.style.display='none');
         led.style.backgroundColor='black';
         led.style.boxShadow='0px 0px 1px black';
     } else {
         isOn=true;
-        //document.querySelector('main').style.display='block';
-        document.querySelector('#fx_snow').style.display='block';
-        document.querySelector('#fx_scanline').style.display='block';
+        onOff.forEach((element) => element.style.display='block');
         led.style.backgroundColor='greenyellow';
         led.style.boxShadow='0px 0px 7px greenyellow;';
     }
