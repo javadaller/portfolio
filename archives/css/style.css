@@ -1,0 +1,12 @@
+@import 'reset.css';
+@import 'fonts.css';
+@import 'colors.css';
+@import 'main.css';
+@import 'animations.css';
+
+.hidden {
+    display: none;
+}
+.visible {
+    display: block;
+}

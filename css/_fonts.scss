@@ -1,0 +1,23 @@
+@font-face {
+	font-family: 'Press_Start';
+	src:url('../assets/fonts/PressStart2P-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Unbutu';
+	src:url('../assets/fonts/Ubuntu-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Courier';
+	src:url('../assets/fonts/CourierPrime-Regular.ttf') format('truetype');
+}
+
+header {
+	font-family:'press_Start';
+	span {
+		font-family:'Courier';
+	}
+}
+
+footer {
+	font-family:'Courier';
+}

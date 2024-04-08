@@ -1,0 +1,13 @@
+:root {
+    --border:#ffffff;
+    --color_shadow:#000000;
+    --text:rgb(255, 182, 72);
+    --text_shadow:rgba(255, 182, 72, 0.425);
+    --scanline:rgb(255, 200, 00);
+    --displayBorder:rgba(255, 182, 72, 0.219);
+}
+
+body {
+    background-color: black;
+    color: var(--text);
+}

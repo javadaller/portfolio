@@ -1,0 +1,27 @@
+header {
+    z-index: 15;
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    width:90%;
+    height: 10%;
+    position:absolute;
+    top:5%;
+    left:5%;
+}
+
+header {
+    h1 {
+        margin-left: 2%;
+    }
+}
+
+#os {
+    position: absolute;
+    top:2%;
+    right:2%;
+}
+
+#osVersion {
+    vertical-align: text-top;
+}

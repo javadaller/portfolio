@@ -1,0 +1,261 @@
+body {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+}
+
+html {
+    height: -webkit-fill-available;
+}
+
+#main, body, html {
+    width:100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+p, a {
+    margin-top: 2%;
+}
+
+a {
+    color:var(--text);
+    text-decoration: none;
+  }
+
+/* --- Main / Monitor --- */
+#main {
+    position: relative;
+    background-color: rgb(157, 156, 156);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#monitor {
+    z-index: 10;
+    position: absolute;
+    width:90%;
+    height:90%;
+    margin:2.5%;
+    padding: 2.5%;
+    background-color: rgb(20, 20, 20);
+    border-radius:2% / 90%;
+    box-shadow: 0 0 5px 10px rgba(36, 35, 35, 0.7);
+    text-shadow: 0 0 10px var(--text_shadow);
+}
+
+#monitor_screen {
+    z-index: 300;
+    width: 100%;
+    height:100%;
+    overflow: hidden;
+    pointer-events: all;
+    filter: blur(0.1px);
+}
+
+.goBack:hover {
+    cursor: pointer;
+}
+
+/* --- Header --- */
+#os_version {
+    text-align: right;
+    font-style: italic;
+    margin-right: 5%;
+}
+#os_version_number {
+    font-style: normal;
+}
+
+/* --- Display --- */
+#display {
+    width:100%;
+    height:100%;
+    padding:1%;
+    position:absolute;
+    bottom:0;
+    right:0;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+#name {
+    width:100%;
+}
+
+#cv {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-top: 2%;
+}
+
+#cv > div {
+    width:45%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+}
+
+#contacts {
+    width:100%;
+}
+
+/* LEVEL BAR */
+#competences > p {
+    width:30%;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.percent {
+    margin-left: 5%;
+}
+
+/* --- FX --- */
+#monitor_texture {
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+}
+#monitor_texture_img {
+    width:100%;
+    height:100%;
+    filter: opacity(10%) grayscale(100%) contrast(75%);
+}
+#fx_texture {
+    z-index: 2;
+}
+#fx_texture_img {
+    width:100%;
+    height:100%;
+    filter: opacity(5%) contrast(250%);
+}
+
+#on_off {
+    z-index: 250;
+    width:4vw;
+    height: 4.5vh;
+    position: absolute;
+    bottom: 1%;
+    right:1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#led_on {
+    width:15px;
+    height:5px;
+    background-color: greenyellow;
+    box-shadow: 0px 0px 7px greenyellow;
+}
+#button_on {
+    width:2vw;
+    height:3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
+}
+
+#button_on_logo {
+    width:70%;
+    opacity: 0.4;
+    filter: drop-shadow(30px 10px 4px #292929);
+}
+
+#button_on:hover {
+    cursor: pointer;
+}
+
+#fx_snow {
+    z-index: 100;
+    width: 2500px;
+    height: 2500px;
+    position: absolute;
+    top:0;
+    left:0;
+    background: url(/assets/images/noise.png);
+    background-repeat: repeat;
+    background-size: 30%;
+    background-position: center;
+    opacity:0.05;
+    overflow: hidden;
+    pointer-events: none;
+}
+#fx_scanline {
+    z-index: 150;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    right: 0;
+    height: 1%;
+    opacity: 0.1;
+    background: var(--scanline);
+    filter: blur(7px);
+}
+.scanline {
+    animation: scanline 1.25s linear;
+}
+.scanlineReverse {
+    animation: scanlineReverse 1.25s linear;
+}
+.blur {  
+    animation: blur 2s linear;
+}
+.skew {
+    animation: skew 4s linear;
+}
+
+.blinking {
+    animation: blinking 0.5s infinite linear;
+}
+
+/*RESPONSIVE*/
+@media (max-width: 1540px) {
+    #competences > p {
+        width:45%;
+    }
+}
+@media (max-width: 1300px) {
+    #cv {
+        flex-direction: column;
+    }
+    #cv > div {
+        width:80%;
+    }
+    #competences > p {
+        width:30%;
+    }
+}
+@media (max-width: 900px) {
+    #competences > p {
+        width:45%;
+    }
+}
+@media (max-width: 850px) {
+    #welcome_menu {
+        width:100%;
+    }
+    #display {
+        margin-top: 2%;
+        width:100%;
+        position:relative;
+    }
+    #cv > div {
+        width:90%;
+    }
+}
+@media (max-width: 550px) {
+    #cv > div {
+        width:100%;
+    }
+    #competences > p {
+        width:60%;
+    }
+}
